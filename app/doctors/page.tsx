@@ -1,44 +1,48 @@
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
-import DoctorCard from "@/components/doctor-card"
+import Navigation from '@/components/navigation';
+import Footer from '@/components/footer';
+import DoctorCard from '@/components/doctor-card';
 
 const doctors = [
   {
-    name: "Dr. Sarah Chen",
-    title: "Chief Dermatologist",
-    specialty: "General & Aesthetic Dermatology",
-    experience: "20+ years",
-    bio: "Board-certified dermatologist with expertise in comprehensive skin health and cosmetic procedures.",
+    name: 'サラ・チェン 医師',
+    title: '院長 / 皮膚科専門医',
+    specialty: '一般皮膚科 & 美容皮膚科',
+    experience: '20年以上',
+    bio: '包括的な皮膚の健康と美容施術において専門知識を持つ認定皮膚科医。',
     credentials: [
-      "MD from Stanford Medical School",
-      "Board Certified - American Academy of Dermatology",
-      "Fellowship in Aesthetic Dermatology",
+      'スタンフォード大学医学部卒',
+      '米国皮膚科学会認定医',
+      '美容皮膚科フェローシップ',
     ],
-    image: "/female-dermatologist-portrait.png",
+    image: '/female-dermatologist-portrait.png',
   },
   {
-    name: "Dr. Michael Roberts",
-    title: "Dermatologist",
-    specialty: "Acne & Burn Treatment",
-    experience: "15+ years",
-    bio: "Specialized in treating acne and managing burn wounds with the latest medical technologies.",
-    credentials: ["MD from Johns Hopkins", "Board Certified - American Academy of Dermatology", "Burn Care Specialist"],
-    image: "/professional-male-dermatologist-portrait.jpg",
+    name: 'マイケル・ロバーツ 医師',
+    title: '皮膚科医',
+    specialty: 'ニキビ & 火傷治療',
+    experience: '15年以上',
+    bio: '最新の医療技術を用いたニキビ治療と火傷管理を専門とする。',
+    credentials: [
+      'ジョンズ・ホプキンス大学卒',
+      '米国皮膚科学会認定医',
+      '火傷ケア専門医',
+    ],
+    image: '/professional-male-dermatologist-portrait.jpg',
   },
   {
-    name: "Dr. Lisa Wong",
-    title: "Dermatologist",
-    specialty: "Aesthetic & Laser Procedures",
-    experience: "12+ years",
-    bio: "Expert in non-invasive aesthetic procedures and laser treatments for skin rejuvenation.",
+    name: 'リサ・ウォン 医師',
+    title: '皮膚科医',
+    specialty: '美容 & レーザー施術',
+    experience: '12年以上',
+    bio: '肌の若返りのための非侵襲的美容施術とレーザー治療の専門家。',
     credentials: [
-      "MD from University of California",
-      "Board Certified - American Academy of Dermatology",
-      "Laser Surgery Specialist",
+      'カリフォルニア大学卒',
+      '米国皮膚科学会認定医',
+      'レーザー手術専門医',
     ],
-    image: "/professional-female-dermatologist-aesthetic-specia.jpg",
+    image: '/professional-female-dermatologist-aesthetic-specia.jpg',
   },
-]
+];
 
 export default function DoctorsPage() {
   return (
@@ -48,8 +52,10 @@ export default function DoctorsPage() {
       {/* Header */}
       <section className="py-16 bg-secondary/30 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-foreground mb-4">Our Doctors</h1>
-          <p className="text-xl text-foreground/70">Meet our team of board-certified dermatologists</p>
+          <h1 className="text-5xl font-bold text-foreground mb-4">医師紹介</h1>
+          <p className="text-xl text-foreground/70">
+            認定皮膚科医のチームをご紹介します
+          </p>
         </div>
       </section>
 
@@ -66,5 +72,5 @@ export default function DoctorsPage() {
 
       <Footer />
     </main>
-  )
+  );
 }

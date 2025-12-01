@@ -1,70 +1,85 @@
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
-import ServiceDetail from "@/components/service-detail"
+import Navigation from '@/components/navigation';
+import Footer from '@/components/footer';
+import ServiceDetail from '@/components/service-detail';
 
 const servicesData = [
   {
-    id: "general",
-    title: "General Dermatology",
-    icon: "🔍",
-    description: "Comprehensive assessment and treatment of common skin conditions",
+    id: 'general',
+    title: '一般皮膚科',
+    icon: '🔍',
+    description: '一般的な皮膚疾患の包括的な診断と治療を行います。',
     details: [
-      "Skin health evaluation and diagnosis",
-      "Treatment of eczema, psoriasis, and dermatitis",
-      "Mole and skin lesion evaluation",
-      "Skin cancer screening",
-      "Prescription topical treatments",
+      '皮膚の健康評価と診断',
+      '湿疹、乾癬、皮膚炎の治療',
+      'ほくろや皮膚病変の評価',
+      '皮膚がん検診',
+      '処方外用薬による治療',
     ],
     benefits: [
-      "Early detection of skin conditions",
-      "Personalized treatment plans",
-      "Preventive care guidance",
-      "Professional skin health advice",
+      '皮膚疾患の早期発見',
+      '個別の治療計画',
+      '予防ケアの指導',
+      '専門的な皮膚の健康アドバイス',
     ],
   },
   {
-    id: "acne",
-    title: "Acne Treatment",
-    icon: "⚡",
-    description: "Advanced acne management for all skin types and ages",
+    id: 'acne',
+    title: 'ニキビ治療',
+    icon: '⚡',
+    description: 'あらゆる肌タイプと年齢層に対応した高度なニキビ管理。',
     details: [
-      "Acne severity assessment",
-      "Topical and oral medication options",
-      "Chemical peels",
-      "Laser acne therapy",
-      "Post-acne scar treatment",
+      'ニキビ重症度の評価',
+      '外用薬および内服薬の選択肢',
+      'ケミカルピーリング',
+      'レーザーニキビ治療',
+      'ニキビ跡の治療',
     ],
-    benefits: ["Clear, healthy skin", "Reduced breakouts", "Minimal side effects", "Long-lasting results"],
+    benefits: [
+      'クリアで健康的な肌',
+      '吹き出物の減少',
+      '副作用の最小化',
+      '持続的な結果',
+    ],
   },
   {
-    id: "burns",
-    title: "Burn & Wound Care",
-    icon: "🔥",
-    description: "Professional treatment and management of burns and wounds",
+    id: 'burns',
+    title: '火傷・創傷ケア',
+    icon: '🤕',
+    description: '火傷や傷の専門的な治療と管理。',
     details: [
-      "Acute burn care and assessment",
-      "Wound dressing and care",
-      "Infection prevention",
-      "Scar management and treatment",
-      "Reconstructive consultation",
+      '急性期の火傷ケアと評価',
+      '創傷処置とケア',
+      '感染予防',
+      '傷跡の管理と治療',
+      '再建に関する相談',
     ],
-    benefits: ["Proper healing process", "Minimized scarring", "Pain management", "Expert wound care"],
+    benefits: [
+      '適切な治癒プロセス',
+      '傷跡の最小化',
+      '疼痛管理',
+      '専門的な創傷ケア',
+    ],
   },
   {
-    id: "aesthetic",
-    title: "Aesthetic Dermatology",
-    icon: "✨",
-    description: "Non-invasive procedures to enhance skin appearance",
+    id: 'aesthetic',
+    title: '美容皮膚科',
+    icon: '✨',
+    description: '肌の見た目を改善するための非侵襲的な施術。',
     details: [
-      "Microdermabrasion",
-      "Chemical peels",
-      "Laser skin resurfacing",
-      "Anti-aging treatments",
-      "Skin brightening procedures",
+      'マイクロダーマブレーション',
+      'ケミカルピーリング',
+      'レーザーリサーフェシング',
+      'アンチエイジング治療',
+      '美白施術',
     ],
-    benefits: ["Improved skin texture", "Reduced fine lines", "Even skin tone", "Youthful appearance"],
+    benefits: [
+      '肌質の改善',
+      '小じわの減少',
+      '均一な肌のトーン',
+      '若々しい外見',
+    ],
   },
-]
+];
 
 export default function ServicesPage() {
   return (
@@ -74,8 +89,10 @@ export default function ServicesPage() {
       {/* Header */}
       <section className="py-16 bg-secondary/30 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-foreground mb-4">Our Services</h1>
-          <p className="text-xl text-foreground/70">Comprehensive dermatological solutions tailored to your needs</p>
+          <h1 className="text-5xl font-bold text-foreground mb-4">診療内容</h1>
+          <p className="text-xl text-foreground/70">
+            ニーズに合わせた包括的な皮膚科ソリューション
+          </p>
         </div>
       </section>
 
@@ -90,5 +107,5 @@ export default function ServicesPage() {
 
       <Footer />
     </main>
-  )
+  );
 }

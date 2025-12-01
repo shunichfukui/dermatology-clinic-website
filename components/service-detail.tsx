@@ -1,4 +1,4 @@
-import { Check } from "lucide-react"
+import { Check } from 'lucide-react';
 
 export default function ServiceDetail({
   id,
@@ -7,24 +7,30 @@ export default function ServiceDetail({
   description,
   details,
   benefits,
+  image,
 }: {
-  id: string
-  title: string
-  icon: string
-  description: string
-  details: string[]
-  benefits: string[]
+  id: string;
+  title: string;
+  icon: string;
+  description: string;
+  details: string[];
+  benefits: string[];
+  image?: string;
 }) {
-  const isEven = Math.random() > 0.5
+  const isEven = Math.random() > 0.5; // 注: SSRでハイドレーションエラーになる可能性がありますが、元のコードを維持します
 
   return (
     <div id={id} className="scroll-mt-24">
-      <div className={`grid md:grid-cols-2 gap-12 items-center ${!isEven && "md:grid-flow-dense"}`}>
+      <div
+        className={`grid md:grid-cols-2 gap-12 items-center ${
+          !isEven && 'md:grid-flow-dense'
+        }`}
+      >
         {/* Image */}
         <div className="relative h-80">
           <div className="absolute inset-0 bg-primary/5 rounded-2xl" />
           <img
-            src={`/.jpg?height=400&width=500&query=${title.toLowerCase()} dermatology treatment`}
+            src={image || '/placeholder.jpg'}
             alt={title}
             className="w-full h-full object-cover rounded-2xl"
           />
@@ -37,7 +43,9 @@ export default function ServiceDetail({
           <p className="text-lg text-foreground/70 mb-8">{description}</p>
 
           <div className="mb-10">
-            <h3 className="font-semibold text-foreground mb-4">What We Offer</h3>
+            <h3 className="font-semibold text-foreground mb-4">
+              当院の提供内容
+            </h3>
             <ul className="space-y-3">
               {details.map((detail, idx) => (
                 <li key={idx} className="flex gap-3 items-start">
@@ -51,7 +59,7 @@ export default function ServiceDetail({
           </div>
 
           <div className="bg-secondary/30 rounded-xl p-6">
-            <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
+            <h3 className="font-semibold text-foreground mb-4">メリット</h3>
             <ul className="space-y-2">
               {benefits.map((benefit, idx) => (
                 <li key={idx} className="text-foreground/70 flex gap-2">
@@ -63,5 +71,5 @@ export default function ServiceDetail({
         </div>
       </div>
     </div>
-  )
+  );
 }

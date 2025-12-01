@@ -1,20 +1,20 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Doctors", href: "/doctors" },
-    { label: "Treatment Flow", href: "/treatment-flow" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Location", href: "/location" },
-  ]
+    { label: 'ホーム', href: '/' },
+    { label: '診療内容', href: '/services' },
+    { label: '医師紹介', href: '/doctors' },
+    { label: '治療の流れ', href: '/treatment-flow' },
+    { label: '料金表', href: '/pricing' },
+    { label: 'アクセス', href: '/location' },
+  ];
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
@@ -23,9 +23,13 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">D</span>
+              <span className="text-primary-foreground font-bold text-lg">
+                D
+              </span>
             </div>
-            <span className="font-semibold text-foreground hidden sm:inline">Dermatology Clinic</span>
+            <span className="font-semibold text-foreground hidden sm:inline">
+              皮膚科クリニック
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,12 +51,16 @@ export default function Navigation() {
               href="/booking"
               className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 text-sm font-medium"
             >
-              Book Appointment
+              Web予約
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -75,11 +83,11 @@ export default function Navigation() {
               className="block px-4 py-2 mt-2 bg-primary text-primary-foreground rounded-lg text-center font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Book Appointment
+              Web予約
             </Link>
           </div>
         )}
       </div>
     </nav>
-  )
+  );
 }

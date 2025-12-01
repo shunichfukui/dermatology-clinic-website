@@ -7,19 +7,19 @@ export default function DoctorCard({
   credentials,
   image,
 }: {
-  name: string
-  title: string
-  specialty: string
-  experience: string
-  bio: string
-  credentials: string[]
-  image: string
+  name: string;
+  title: string;
+  specialty: string;
+  experience: string;
+  bio: string;
+  credentials: string[];
+  image: string;
 }) {
   return (
     <div className="bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
       <div className="relative h-80 overflow-hidden bg-secondary">
         <img
-          src={image || "/placeholder.svg"}
+          src={image || '/placeholder.jpg'}
           alt={name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
@@ -31,17 +31,21 @@ export default function DoctorCard({
 
         <div className="mb-4 pb-4 border-b border-border">
           <p className="text-sm text-foreground/70 mb-2">
-            <span className="font-medium text-foreground">Specialty:</span> {specialty}
+            <span className="font-medium text-foreground">専門:</span>{' '}
+            {specialty}
           </p>
           <p className="text-sm text-foreground/70">
-            <span className="font-medium text-foreground">Experience:</span> {experience}
+            <span className="font-medium text-foreground">経験:</span>{' '}
+            {experience}
           </p>
         </div>
 
         <p className="text-foreground/70 text-sm mb-4 leading-relaxed">{bio}</p>
 
         <div className="bg-secondary/30 rounded-lg p-4">
-          <p className="font-semibold text-sm text-foreground mb-3">Credentials</p>
+          <p className="font-semibold text-sm text-foreground mb-3">
+            資格・経歴
+          </p>
           <ul className="space-y-2">
             {credentials.map((cred, idx) => (
               <li key={idx} className="text-sm text-foreground/70 flex gap-2">
@@ -53,5 +57,5 @@ export default function DoctorCard({
         </div>
       </div>
     </div>
-  )
+  );
 }
