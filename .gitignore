@@ -1,0 +1,33 @@
+# 依存関係 (Dependencies)
+/node_modules
+/.pnp
+.pnp.js
+
+# 環境変数 (Environment variables)
+# .env.example などのテンプレート以外は除外します
+.env
+.env*.local
+
+# Next.js のビルド出力
+/.next/
+/out/
+
+# プロダクションビルド (Production)
+/build
+
+# デバッグログ (Debug logs)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# システムファイル (System Files)
+.DS_Store
+Thumbs.db
+
+# Vercel (デプロイ設定など)
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
