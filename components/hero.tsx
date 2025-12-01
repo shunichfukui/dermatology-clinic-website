@@ -5,8 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Animated background elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
         <div
@@ -15,9 +14,8 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div className="flex flex-col-reverse gap-8 md:grid md:grid-cols-2 md:gap-12 items-center">
           <div className="animate-slide-up space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
               <span className="w-2 h-2 bg-accent rounded-full" />
@@ -68,7 +66,7 @@ export default function Hero() {
           </div>
 
           {/* Right Visual */}
-          <div className="relative h-full min-h-[500px] animate-scale-in">
+          <div className="relative w-full min-h-[300px] md:min-h-[500px] animate-scale-in">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl" />
             <img
               src="/modern-dermatology-clinic-interior-with-comfortabl.jpg"
